@@ -11,7 +11,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appComponent = DaggerAppComponent
+        appComponent = DaggerAppComponent //Bir marta run bergandan keyin chiqadi DaggerAppComponent
             .builder()
             .appModule(AppModule(context = this))
             .build()

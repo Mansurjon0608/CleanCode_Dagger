@@ -9,7 +9,6 @@ import dagger.Provides
 
 @Module
 class AppModule(private val context: Context) {
-
     @Provides
     fun provideContext(): Context {
         return context
@@ -23,6 +22,5 @@ class AppModule(private val context: Context) {
         return MainViewModelFactory(getUsernameUseCase = getUsernameUseCase,
             saveUserNameUseCase = saveUserNameUseCase)
     }
-
 }
 

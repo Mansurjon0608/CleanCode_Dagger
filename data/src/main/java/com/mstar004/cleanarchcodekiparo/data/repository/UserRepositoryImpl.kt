@@ -8,7 +8,6 @@ import com.mstar004.cleanarchcodekiparo.domain.repository.UserRepository
 
 class UserRepositoryImpl(private val userStorage: UserStorage) : UserRepository {
 
-
     override fun saveUser(saveParam: SaveUserNameParam): Boolean {
         val user = User(firstName = saveParam.name, lastName = "")
         return userStorage.save(user)

@@ -7,15 +7,14 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class DomainModule() {
-
+class DomainModule{
     @Provides
     fun provideGetUserNameUseCase(userRepository: UserRepository): GetUsernameUseCase {
         return GetUsernameUseCase(userRepository = userRepository)
     }
+
     @Provides
     fun provideSaveUserNameUseCase(userRepository: UserRepository): SaveUserNameUseCase {
         return SaveUserNameUseCase(userRepository = userRepository)
     }
-
 }
